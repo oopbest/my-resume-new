@@ -3,7 +3,7 @@ import Skills from "./Skills";
 
 function About() {
   return (
-    <section id="about" className="container mx-auto py-16 text-center">
+    <section id="about" className="container mx-auto p-4 text-center">
       <h2 className="text-3xl font-bold mb-8">About me</h2>
       <p className="text-xl mb-4">
         A highly skilled Full-Stack Developer with 11+ years of experience in
