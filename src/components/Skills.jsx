@@ -30,7 +30,7 @@ function Services() {
                 "✅ React.js, Next.js (12, 14, 15) for modern, interactive UIs",
                 "✅ TypeScript & JavaScript (ES6+) for scalable and maintainable code",
                 "✅ Tailwind CSS, Bootstrap, Chakra UI, DaisyUI for stunning and responsive designs",
-                "✅ State Management with Redux, Redux Toolkit, and Zustand",
+                "✅ State Management with Redux, Redux Toolkit, Zustand, and useContext",
               ],
               icon: "🎨",
             },
