@@ -20,19 +20,23 @@ function Hero() {
 
   const handleDownload = () => {
     const pdfUrl = "/resume.pdf";
-    fetch(pdfUrl)
-      .then((response) => response.blob())
-      .then((blob) => {
-        const url = window.URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.href = url;
-        link.setAttribute("download", "setthawut-resume.pdf");
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        window.URL.revokeObjectURL(url);
-      })
-      .catch((error) => console.error("Error downloading the file:", error));
+    if (window.innerWidth < 768) {
+      window.open(pdfUrl, "_blank");
+    } else {
+      fetch(pdfUrl)
+        .then((response) => response.blob())
+        .then((blob) => {
+          const url = window.URL.createObjectURL(blob);
+          const link = document.createElement("a");
+          link.href = url;
+          link.setAttribute("download", "setthawut-resume.pdf");
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+          window.URL.revokeObjectURL(url);
+        })
+        .catch((error) => console.error("Error downloading the file:", error));
+    }
   };
 
   return (
