@@ -22,7 +22,7 @@ function Hero() {
     const pdfUrl = "/resume.pdf";
     const link = document.createElement("a");
     link.href = pdfUrl;
-    link.download = "setthawut-resume.pdf";
+    link.setAttribute("download", "Setthawut-Resume.pdf");
 
     document.body.appendChild(link);
     link.click();
