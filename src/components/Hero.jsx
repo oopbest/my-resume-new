@@ -18,6 +18,17 @@ function Hero() {
     return () => clearInterval(intervalId);
   }, [index, typingText]);
 
+  const handleDownload = () => {
+    const pdfUrl = "/resume.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "setthawut-resume.pdf";
+
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div
@@ -45,6 +56,14 @@ function Hero() {
             >
               Contact Me
             </Link>
+            <a
+              // href="/public/resume.pdf"
+              // download="Setthawut-Resume.pdf"
+              onClick={handleDownload}
+              className="btn btn-secondary ms-2"
+            >
+              Resume
+            </a>
           </div>
         </div>
       </div>
